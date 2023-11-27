@@ -1,0 +1,537 @@
+/* ===================================
+Template Name : Paul Lapkin
+Template URI :
+Author : Infat Akanda
+Author URI : 
+Version : 1.0
+Description : a minimal portfolio template,
+
+====================================/*
+
+/* COMMON CSS */
+
+
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: #000;
+}
+
+
+
+/* REUSABLE CSS */
+
+.container{
+    max-width: 117rem;
+    margin: auto;  
+}
+
+.img-fluid{
+    width: 100%;
+}
+
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.btn{
+    width: 25%;
+    display: inline-block;
+    background: #ff2b4a;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2rem;
+    border: .1rem solid #ff2b4a;
+    transition: 1s;
+    
+}
+
+
+.btn:hover{
+    background: transparent;
+    color: #ff2b4a;
+}
+
+a,
+a:hover {
+  text-decoration:none
+}
+
+.section-title{
+    text-align: center;
+
+}
+
+.section-title h2{
+    text-transform: capitalize;
+    font-size: 3rem;
+    margin-bottom: .5rem;
+}
+
+.section-title span{
+    margin-bottom: 2rem;
+}
+
+section{
+    padding: 8rem 0;
+}
+
+
+/* Main CSS */
+
+nav{
+    padding: 4rem 0;
+}
+
+.logo{
+    float: left;
+}
+
+.menu{
+    float: right;
+}
+
+
+#hero{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,0.75)), url(./img/hero.jpg) no-repeat center / cover;
+    position: relative;
+    
+
+}
+
+.heder-content-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heder-content-box h1 span {
+    font-size: 6rem;
+}
+.heder-content-box h1{
+    color: #fff;
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    display: inline-block;
+}
+
+.heder-content-box h1::after{
+    content: '';
+    background: #fff;
+    width: 100%;
+    border: .1rem solid #fff;
+    display: block;
+}
+
+.heder-content-box h1::before{
+    content: '';
+    background: #fff;
+    width: 100%;
+    border: .1rem solid #fff;
+    display: block;
+}
+
+
+.heder-content-box span{
+    color: #fff;
+    font-size: 2rem;
+    display: inline-block;
+}
+
+.menu a ion-icon{
+    color: #fff;
+    font-size: 5rem;
+     border: .1rem solid #fff;
+     padding: 0 .8rem;
+}
+.next-section{
+    text-align: center;
+}
+.next-section a{
+    position: absolute;
+    bottom: 4rem;
+    
+    color: #fff;
+    font-size: 4rem;
+
+}
+
+.next-section a ion-icon{
+    position: relative;
+    animation: arrow 3s infinite ease-in;
+
+}
+
+
+@keyframes arrow {
+    0%{
+        top : 1rem;
+    }
+    50% {
+        top: 3rem;
+    }
+    100% {
+        top: 1rem;
+    }
+}
+
+
+/* ABOUT ME AREA */
+
+
+
+.about-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.about-grid-item img{
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
+.about-grid-item h3{
+    font-size: 2rem;
+}
+
+
+.about-grid-item{
+    margin: 4rem;
+}
+
+.about-cta-btn{
+    margin-top: 4rem;
+}
+
+
+/* WORK */
+
+
+#work{
+    background: #f6f6f6;
+    
+}
+
+.work-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+    
+}
+
+.work-grid-item{
+    padding: 8rem 0;
+    text-align: center;
+    background: #000;
+    color: #fff;
+}
+
+.work-grid-item:nth-child(1){
+    background: #10c6fc;
+}
+.work-grid-item:nth-child(2){
+    background: #835aeb;
+
+}
+.work-grid-item:nth-child(3){
+    background: #002453;
+ 
+}
+.work-grid-item:nth-child(4){
+    background: #ff2b4a;
+  
+}
+
+.work-grid-item h3{
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.work-grid-item a ion-icon{
+    font-size: 3rem;
+    color: #fff;
+}
+
+
+/* portfolio area */
+
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.portfolio-grid-item{
+    background: rgba(0, 0, 0, 0.85);
+    padding: 2rem;
+}
+
+#portfolio{
+    background: url(./img/experience.jpg) no-repeat center / cover fixed;
+}
+
+.portfolio-grid-item h2{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.portfolio-grid-item h3{
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.portfolio-grid-item span{
+    color: #fff;
+}
+
+.portfolio-grid-item p{
+    color: #fff;
+}
+
+hr{
+    border: none;
+    border: .1rem solid #fff;
+    margin-top: 3rem;
+
+}
+
+.work-button{
+    text-align: center;
+    margin-top: 3rem;
+    
+    
+}
+
+.work-button button{
+    text-transform: uppercase;
+    background: #000;
+    color: #fff;
+    padding: .7rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    border: .1rem solid #fff;
+}
+
+.work-button button:hover{
+    background: #ff2b4a;
+    color: #fff;
+}
+img{
+    width: 100%;
+}
+.skill-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.skill-grid-item{
+    width: 100%;
+    height: 25rem;
+}
+
+.skill-grid-item img{
+    width: 100%;
+    height: 100%;
+}
+
+.skill-grid-item:nth-child(5){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.skill-grid-item:nth-child(5){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.work-button button.mixitup-control-active{
+    background: #ff2b4a;
+}
+
+.uk-lightbox{
+    background: rgba(0, 0, 0, 0.75);
+}
+
+#testimonial{
+    background: url(./img/testimonial.jpg) no-repeat center top / cover;
+}
+
+.testimonial-content{
+    width: 50%;
+}
+
+.testimonial-content img{
+    width: 15%;
+}
+
+.testimonial-content p{
+    color: #000;
+    text-align: justify;
+}
+
+.testimonial-content h3{
+    color: #000; 
+    text-transform: uppercase;
+}
+
+.testimonial-content span{
+    color: #000; 
+    text-transform: capitalize;
+}
+
+
+
+
+#contact{
+    background: url(./img/contact.jpg) no-repeat center / cover fixed;
+}
+
+.contact-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    
+}
+
+.contact-bg{
+    background: rgba(0,0,0,0.8);
+    padding: 0 3rem;
+    
+}
+
+.contact-grid-item h2{
+    color: #fff;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+.contact-grid-item input[type="text"]{
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    background: transparent;
+    color: #fff;
+    border: .1rem solid #fff;
+    
+}
+
+.contact-grid-item input[type="textarea"]{
+    width: 100%;
+    padding: 8rem 0;
+    margin-top: 2rem;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    background: transparent;
+    color: #fff;   
+}
+.contact-text-area{
+    margin-left: 2rem;
+}
+
+.contact-btn{
+    text-align: right;
+    margin-top: 5rem;
+}
+
+.contact-content-area{
+    background: rgba(0,0,0,0.8);
+    padding: 5rem;
+    color: #fff;
+}
+
+.contact-content-area h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+.contact-content-area:nth-child(2){
+    margin-top: 1.5rem;
+}
+
+.contact-content-area:nth-child(3){
+    margin-top: 1.5rem;
+}
+
+/* footer-area */
+
+#footer-area{
+    padding: 4rem 0;
+    background: #222;   
+}
+
+.social-list{
+    text-align: center;
+}
+
+.social-list ul li{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;
+    
+}
+
+.social-list ul li a ion-icon{
+    color: #fff;
+    border-right: .1rem solid #fff;
+    padding: 0 1rem;
+    
+    
+}
+
+.social-list ul li a ion-icon:hover{
+    color: #ff2b4a;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.copyright li a ion-icon:hover{
+    background: #fff;
+    color: #000;
+}
+
+.copyright span a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.up-button ul li a ion-icon{
+    color: #fff;
+    font-size: 3rem;
+    margin-top: 2rem;
+    border: .1rem solid #fff;
+    list-style: none;
+}
+
